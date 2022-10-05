@@ -1,6 +1,6 @@
 ﻿namespace Banker.Entities.Dtos;
 
-public class ResponseModel
+public class ResponseDto
 {
     public bool IsSuccessRequest { get; set; }
 

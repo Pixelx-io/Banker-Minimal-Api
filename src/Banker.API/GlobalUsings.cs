@@ -11,3 +11,4 @@ global using Banker.API.Queries;
 global using Banker.API.Requests;
 
 global using Banker.Entities.Models;
+global using Banker.Entities.Dtos;

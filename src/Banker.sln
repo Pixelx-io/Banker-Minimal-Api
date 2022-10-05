@@ -5,6 +5,10 @@ VisualStudioVersion = 17.4.32916.344
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Banker.API", "Banker.API\Banker.API.csproj", "{EE82F84E-201A-444F-8197-BE9D836F2618}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Banker.DataAccess", "Banker.DataAccess\Banker.DataAccess.csproj", "{C6D29A48-E581-4DE1-977E-766C3C91CC41}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Banker.Entities", "Banker.Entities\Banker.Entities.csproj", "{18AA828C-1FF6-47A2-972C-7A0203FB8EDF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{EE82F84E-201A-444F-8197-BE9D836F2618}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EE82F84E-201A-444F-8197-BE9D836F2618}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EE82F84E-201A-444F-8197-BE9D836F2618}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C6D29A48-E581-4DE1-977E-766C3C91CC41}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6D29A48-E581-4DE1-977E-766C3C91CC41}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C6D29A48-E581-4DE1-977E-766C3C91CC41}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C6D29A48-E581-4DE1-977E-766C3C91CC41}.Release|Any CPU.Build.0 = Release|Any CPU
+		{18AA828C-1FF6-47A2-972C-7A0203FB8EDF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18AA828C-1FF6-47A2-972C-7A0203FB8EDF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18AA828C-1FF6-47A2-972C-7A0203FB8EDF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18AA828C-1FF6-47A2-972C-7A0203FB8EDF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
