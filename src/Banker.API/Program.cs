@@ -14,7 +14,7 @@ builder.Services.AddMediatR(Assembly.GetExecutingAssembly());
 
 builder.Services.AddAutoMapper(typeof(MappingConfig));
 
-builder.Services.AddScoped<IAccountManager, AccountManager>();
+builder.Services.AddScoped<IAccountRepository, AccountRepository>();
 
 //builder.Services.map
 

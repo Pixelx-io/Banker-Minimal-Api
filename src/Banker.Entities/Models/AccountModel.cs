@@ -21,5 +21,5 @@ public class AccountModel
     public decimal Balance { get; set; }
 
     [Required]
-    public DateTime CreatedDate { get; set; }
+    public DateTime CreatedDate { get; set; } = DateTime.Now;
 }

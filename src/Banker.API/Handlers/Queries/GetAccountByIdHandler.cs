@@ -2,15 +2,17 @@
 
 public class GetAccountByIdHandler : IRequestHandler<GetAccountByIdQuery, IResult>
 {
-    private readonly IAccountManager _accountManager;
+    private readonly IAccountRepository _accountRepository;
 
-    public GetAccountByIdHandler(IAccountManager accountManager)
+    public GetAccountByIdHandler(IAccountRepository accountRepository)
     {
-        _accountManager = accountManager;
+        _accountRepository = accountRepository;
     }
+
     public async Task<IResult> Handle(GetAccountByIdQuery request, CancellationToken cancellationToken)
     {
-        var modelFromDb = await _accountManager.GetAccountByIdAsync(request.Id);
+        var modelFromDb = await _accountRepository
+            .GetAccountByIdAsync(request.Id);
 
         var response = new ResponseDto
         {
