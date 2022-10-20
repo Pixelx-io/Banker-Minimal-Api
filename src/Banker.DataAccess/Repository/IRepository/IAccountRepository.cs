@@ -1,4 +1,6 @@
-﻿namespace Banker.DataAccess.Repository.IRepository;
+﻿using Microsoft.Identity.Client;
+
+namespace Banker.DataAccess.Repository.IRepository;
 
 public interface IAccountRepository
 {
@@ -10,5 +12,5 @@ public interface IAccountRepository
 
     Task<AccountDto> UpdateAccountAsync(AccountDto account);
 
-    Task<bool> DeleteAccountAsync(AccountDto account);
+    Task<bool> DeleteAccountAsync(int accountId);
 }

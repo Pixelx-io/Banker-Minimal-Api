@@ -1,7 +1,15 @@
+using Banker.API.Extensions;
+
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+builder.Services.AddSwaggerGen(options =>
+{
+    options.EnableAnnotations();
+
+    var xmlFilename = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+    options.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, xmlFilename));
+});
 
 /* Database Connection */
 
@@ -29,7 +37,6 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-app.MapGet("/Account/{id}", async (IMediator mediator, int id) 
-    => await mediator.Send(new GetAccountByIdQuery(id)));
+app.MapAccountEndpoints();
 
 app.Run();

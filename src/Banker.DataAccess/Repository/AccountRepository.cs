@@ -71,9 +71,9 @@ public class AccountRepository : IAccountRepository
         return isSuccess == 1 ? account : new AccountDto();
     }
 
-    public async Task<bool> DeleteAccountAsync(AccountDto account)
+    public async Task<bool> DeleteAccountAsync(int accountId)
     {
-        var isAvailable = await _db.Accounts.FirstOrDefaultAsync(a => a.Id == account.Id);
+        var isAvailable = await _db.Accounts.FirstOrDefaultAsync(a => a.Id == accountId);
 
         if (isAvailable is null)
             return false;
